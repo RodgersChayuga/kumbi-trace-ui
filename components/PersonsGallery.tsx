@@ -5,7 +5,7 @@ import Gallery from "./ui/Gallery";
 
 const PersonsGallery = () => {
   return (
-    <div className="flex flex-col justify-center items-center mx-auto mt-5 md:pb-24 md:pt-12">
+    <div className="flex flex-col justify-center items-center mx-auto mt-5 md:pb-24 md:pt-12 w-[80%] md:w-full">
       <h2 className="text-2xl md:text-4xl font-extrabold text-[#D82126]">
         MISSING - ( 20 )
       </h2>
@@ -33,7 +33,7 @@ const PersonsGallery = () => {
         </div>
       </form>
 
-      <div className="flex p-4 gap-6 my-6">
+      <div className="flex p-4 gap-6 my-6 mx-auto">
         <input
           type="date"
           className="bg-transparent border-4 border-gray-500 rounded-lg px-2 "
