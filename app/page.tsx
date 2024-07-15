@@ -8,12 +8,12 @@ export default function Home() {
   return (
     <main className="">
       <NavigationBar />
-      <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700"></hr>
+      
       <PersonsGallery />
       <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700"></hr>
       <HowItWorks />
-      {/* <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700"></hr>
-      <Hotline /> */}
+      <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700"></hr>
+      <Hotline />
       <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700"></hr>
       <Footer />
     </main>

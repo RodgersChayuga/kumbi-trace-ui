@@ -18,7 +18,7 @@ const Trace = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const debouncedSearchTerm = useRef(searchTerm);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 3;
 
   console.log("data2: ", data);
 

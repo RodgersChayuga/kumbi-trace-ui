@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
+
+
 import {
   Disclosure,
   DisclosureButton,
@@ -29,11 +32,11 @@ const NavigationBar = () => {
   </svg>;
 
   return (
-    <nav>
+    <nav className="sticky top-0 border-b-0 bg-[#F0E5D2]">
       <div className=" mx-auto w-[90%] md:w-[80%] ">
         <div className="flex mx-auto justify-between  ">
           {/* Primary menu and logo */}
-          <div className="flex items-center gap-4 my-2  justify-between w-full">
+          <div className="flex items-center gap-4 mt-2  justify-between w-full">
             {/* logo */}
             <a
               href="/"
@@ -56,7 +59,11 @@ const NavigationBar = () => {
           {/* Mobile navigation toggle */}
           <div className="lg:hidden flex items-center">
             <button onClick={() => setToggleMenu(!toggleMenu)}>
-              <FaBarsStaggered className="h-6" />
+              {toggleMenu ? (
+                <AiOutlineClose className="h-6" />
+              ) : (
+                <FaBarsStaggered className="h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -64,12 +71,12 @@ const NavigationBar = () => {
       {/* mobile navigation */}
 
       <div
-        className={`fixed z-40 bg-[#F0E5D2] overflow-hidden flex flex-col lg:hidden gap-12  origin-top duration-700 ${
-          !toggleMenu ? "h-0 w-full" : "h-full  w-full "
+        className={`fixed  bg-[#F0E5D2] overflow-hidden flex flex-col lg:hidden gap-12  origin-top duration-700 ${
+          !toggleMenu ? "h-0 w-full" : "h-full  w-full z-40"
         }`}
       >
         {/* <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700"></hr> */}
-        <div className="p-8 w-full">
+        <div className="p-8 w-full z-40 ">
           <div className="mx-auto w-full max-w-lg divide-y divide-white/5 rounded-xl ">
             <a href="#" className="pb-6 px-6 font-semibold">
               HOME
@@ -117,6 +124,7 @@ const NavigationBar = () => {
           </div>
         </div>
       </div>
+      <hr className="h-px my-8 bg-gray-400 border-0 dark:bg-gray-700"></hr>
     </nav>
   );
 };

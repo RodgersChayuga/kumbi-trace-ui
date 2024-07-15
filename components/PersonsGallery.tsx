@@ -13,7 +13,7 @@ const PersonsGallery = () => {
         REPORT MISSING PERSON AS SOON AS POSSIBLE
       </p>
       <form method="GET" action="">
-        <div className=" border-b-2 border-gray-500 p-2 relative flex">
+        <div className="border-b-2 border-gray-500 p-2 flex z-20">
           <span className="w-auto flex justify-end  items-center text-gray-500 px-2">
             <IoSearchOutline />
           </span>

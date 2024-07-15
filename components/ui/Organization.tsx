@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
-import { IoSearchOutline, IoArrowForward, IoArrowBack } from "react-icons/io5";
+import React, { useState } from "react";
+import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import { data_org } from "../../data_org";
 
 interface Company {
@@ -15,41 +15,25 @@ interface Company {
 }
 
 const Organization = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const debouncedSearchTerm = useRef(searchTerm);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
 
-  const handleSearchChange = (e: any) => {
-    e.preventDefault(); // Prevent form submission
-    setSearchTerm(e.target.value.toLowerCase()); // Ensure case-insensitive search
-    const timeoutId = setTimeout(() => {
-      debouncedSearchTerm.current = e.target.value.toLowerCase();
-    }, 500); // Adjust delay (in milliseconds) as needed
-
-    return () => clearTimeout(timeoutId); // Cleanup function for timeout
-  };
-
-  const filteredData = data_org.filter((org) => {
-    const searchTermLower = debouncedSearchTerm.current.toLowerCase();
-    return org.organizarion.toString().includes(searchTermLower); // Filter by ID
-  });
-
   // Calculate total pages
-  const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+  const totalPages = Math.ceil(data_org.length / itemsPerPage);
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
 
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const displayedData = filteredData.slice(startIndex, endIndex);
+  const endIndex = Math.min(startIndex + itemsPerPage, data_org.length); // Ensures endIndex doesn't exceed data length
+
+  const slicedData = data_org.slice(startIndex, endIndex); // Slice data based on pagination
 
   return (
     <>
-      <div className="grid grid-cols-1 content-center md:grid-cols-3 gap-6">
-        {data_org.map((org) => (
+      <div className="grid grid-cols-1 content-center md:grid-cols-3 w-[60%] mx-auto">
+        {slicedData.map((org) => (
           <Company
             key={org.id}
             url={org.url}
@@ -63,7 +47,6 @@ const Organization = () => {
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}
-        totalPersons={filteredData.length}
         handlePageChange={handlePageChange}
       />
     </>
@@ -72,21 +55,17 @@ const Organization = () => {
 
 const Company = ({ id, url, organizarion, website, email, phone }: Company) => {
   return (
-    <div>
-      <div className="card flex flex-col items-center gap-2 my-4">
-        <Image
-          src={url}
-          alt={organizarion}
-          height="400"
-          width="400"
-          className="object-contain border border-black rounded-md"
-        />
-        <div className=" text-black text-xl md:text-2xl font-extrabold flex flex-col">
-          <h3>{phone}</h3>
-          <h3>{email}</h3>
-          <h3>{website}</h3>
-        </div>
-      </div>
+    <div className=" flex flex-col items-center gap-2 m-2  border border-black rounded-xl  ">
+      <Image
+        src={url}
+        alt={organizarion}
+        height={400}
+        width={400}
+        className="object-contain  rounded-m"
+      />
+      <div className=" text-black text-xl md:text-2xl font-extrabold">{organizarion}</div>
+      <div className=" text-black text-xl md:text-2xl font-extrabold">{phone}</div>
+      <div className=" text-black text-xl md:text-2xl font-extrabold">{email}</div>
     </div>
   );
 };
@@ -95,11 +74,9 @@ const Pagination = ({
   currentPage,
   totalPages,
   handlePageChange,
-  totalPersons,
 }: {
   currentPage: number;
   totalPages: number;
-  totalPersons: number;
   handlePageChange: (pageNumber: number) => void;
 }) => {
   const handlePrevClick = (currentPage: number) => {

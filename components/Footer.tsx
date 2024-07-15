@@ -13,7 +13,7 @@ const Footer = () => {
           <h3 className="text-lg md:text-xl font-bold text-[#D82126]">
             LET US GET OUR PEOPLE HOME
           </h3>
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly mt-2">
             <FaXTwitter />
             <FaInstagram />
             <FaTiktok />
