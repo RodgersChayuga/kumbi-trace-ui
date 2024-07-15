@@ -33,7 +33,7 @@ const PersonsGallery = () => {
         </div>
       </form>
 
-      <div className="flex p-4 gap-6 my-6 mx-auto">
+      {/* <div className="flex p-4 gap-6 my-6 mx-auto">
         <input
           type="date"
           className="bg-transparent border-4 border-gray-500 rounded-lg px-2 "
@@ -46,8 +46,8 @@ const PersonsGallery = () => {
             className="bg-transparent ml-2 placeholder-black outline-none"
           />
         </div>
-      </div>
-      <h3 className="text-xl text-black font-extrabold">24/06/2024</h3>
+      </div> */}
+      <h3 className="text-xl text-black font-extrabold pt-6">24/06/2024</h3>
       <h3 className="text-xl text-black font-extrabold">
         Nairobi, Mombasa, Kisumu
       </h3>
