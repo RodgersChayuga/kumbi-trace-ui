@@ -19,7 +19,7 @@ const HowItWorks = () => {
           <p>Information about Persons concerned.</p>
         </div>
         <div>
-          <FaLongArrowAltRight className="text-6xl hidden md:inline-block" />
+          <FaLongArrowAltRight className="text-4xl hidden md:inline-block" />
         </div>
         <div className="flex flex-col justify-center items-center gap-4">
           <RiVerifiedBadgeLine className="text-8xl" />
@@ -29,7 +29,7 @@ const HowItWorks = () => {
           <p>Information about Persons concerned.</p>
         </div>
         <div>
-          <FaLongArrowAltRight className="text-6xl hidden md:inline-block" />
+          <FaLongArrowAltRight className="text-4xl hidden md:inline-block" />
         </div>
         <div className="flex flex-col justify-center items-center gap-4">
           <AiOutlinePushpin className="text-8xl" />
