@@ -5,7 +5,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 
 const NavigationBar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -42,7 +46,7 @@ const NavigationBar = () => {
               <a href="#">HOME</a>
               <a href="#">ABOUT</a>
               <a href="#">LOGIN</a>
-              <a className=" bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  me-2 mx-auto ">
+              <a className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center  me-2 mx-auto ">
                 SUBMIT
               </a>
             </div>
