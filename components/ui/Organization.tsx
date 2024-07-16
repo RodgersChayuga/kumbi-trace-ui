@@ -32,7 +32,7 @@ const Organization = () => {
 
   return (
     <>
-      <div className="grid grid-cols-1 content-center md:grid-cols-3 w-[60%] mx-auto">
+      <div className="grid grid-cols-1 content-center md:grid-cols-3 md:w-[60%] mx-auto">
         {slicedData.map((org) => (
           <Company
             key={org.id}

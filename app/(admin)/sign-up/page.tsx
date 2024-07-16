@@ -34,7 +34,7 @@ const page = () => {
             name="email"
             id="email"
             placeholder="johndoe@gmail.com"
-            className="w-full border-b border-[#060709]   px-1 text-base font-medium text-[#6B7280] outline-none bg-transparent "
+            className="w-full border-b border-[#060709]   px-1 text-base font-medium text-black outline-none bg-transparent "
           />
         </div>
         <div className="my-5">
@@ -49,7 +49,7 @@ const page = () => {
             name="text"
             id="password"
             placeholder="**********"
-            className="w-full border-b border-[#060709]  pt-3 px-1 text-base font-medium text-[#6B7280] outline-none bg-transparent "
+            className="w-full border-b border-[#060709]  pt-3 px-1 text-base font-medium text-black outline-none bg-transparent "
           />
         </div>
         <div className="pt-8">
@@ -62,7 +62,7 @@ const page = () => {
             />
             <label
               htmlFor="default-checkbox"
-              className="ms-2  font-medium text-gray-900 dark:text-gray-300"
+              className="ms-2  font-medium text-black "
             >
               I AGREE TO THE{" "}
               <span className="text-[#D82126]">TERMS AND CONDITION *</span>
@@ -73,11 +73,11 @@ const page = () => {
               id="default-checkbox"
               type="checkbox"
               value=""
-              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded "
+              className="w-4 h-4 text-black bg-gray-100 border-gray-300 rounded "
             />
             <label
               htmlFor="default-checkbox"
-              className="ms-2  font-medium text-gray-900 dark:text-gray-300"
+              className="ms-2  font-medium text-black "
             >
               I WANT TO RECEIVE EMAIL NOTIFICATIONS
             </label>
@@ -91,10 +91,11 @@ const page = () => {
         </div>
         <div className="flex justify-center my-12">
           <h2 className="text-sm md:text-md font-extrabold text-[#060709] ">
-            HAVE AN ACCOUNT?{" "}
+            HAVE AN ACCOUNT ?{" "}
             <a href="/login" className="text-[#D82126] mr-1">
               LOGIN
-            </a>INSTEAD.
+            </a>
+            INSTEAD.
           </h2>
         </div>
       </form>
