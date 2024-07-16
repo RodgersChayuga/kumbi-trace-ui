@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
+import NavigationBar from "@/components/NavigationBar";
+import Footer from "@/components/Footer";
 
 const inter = Roboto_Flex({ subsets: ["latin"] });
 
@@ -19,7 +21,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/fist-up.png" sizes="any" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavigationBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
