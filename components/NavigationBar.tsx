@@ -47,7 +47,7 @@ const NavigationBar = () => {
             </a>
             <div className="hidden lg:flex gap-16 justify-center items-center">
               <a href="/">HOME</a>
-              <a href="#">ABOUT</a>
+              {/* <a href="#">ABOUT</a> */}
               <a href="/login">LOGIN</a>
               <a
                 href="/submit"
