@@ -108,7 +108,7 @@ const page = () => {
           />
         </div>
 
-        <div className="relative w-full mb-4">
+        <div className="w-full mb-4">
           <label
             htmlFor="email"
             className="block text-base font-medium text-#060709]"

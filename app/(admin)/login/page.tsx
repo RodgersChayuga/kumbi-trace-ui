@@ -37,7 +37,7 @@ const page = () => {
             className="w-full border-b border-[#060709]  pt-3 px-1 text-base font-medium text-[#6B7280] outline-none bg-transparent "
           />
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between">
+        <div className="flex flex-col items-center  md:flex-row md:justify-between">
           <div className="flex items-center mb-4">
             <input
               id="default-checkbox"
@@ -47,7 +47,7 @@ const page = () => {
             />
             <label
               htmlFor="default-checkbox"
-              className="ms-2  font-medium text-gray-900 dark:text-gray-300"
+              className="ms-2  font-medium text-black"
             >
               REMEMBER
             </label>
@@ -62,7 +62,7 @@ const page = () => {
         </div>
         <div className="flex justify-center my-12">
           <h2 className="text-sm md:text-md font-extrabold text-[#060709] ">
-            HAVE AN ACCOUNT?{" "}
+            HAVE AN ACCOUNT ?{" "}
             <a href="/sign-up" className="text-[#D82126] mr-1">
               SIGN UP
             </a>
